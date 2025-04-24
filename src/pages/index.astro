@@ -1,0 +1,95 @@
+
+
+---
+import footer from '../components/footer.astro';
+
+---
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="Helmar Baechle" content="Uspekhi" />
+  </head>
+  <body>
+    <div class="m-8 p-6 bg-white dark:bg-gray-900 rounded-2xl shadow-lg max-w-3xl mx-auto space-y-6">
+  <!-- Catchy Header -->
+  <h1 class="text-4xl font-extrabold text-gray-800 dark:text-white tracking-wide text-center">
+    🚀 Astro Starter
+  </h1>
+  
+  <p class="text-lg text-gray-600 dark:text-gray-300 text-center">
+    This is a simple starter template built with Tailwind CSS and Astro
+  </p>
+
+  <!-- Image & Button -->
+  <div class="flex flex-col items-center gap-6 md:flex-row md:justify-center md:gap-12">
+    <div>
+      <img 
+  src="/AIsudio.png" 
+  alt="Favicon" 
+  class="w-32 h-32 rounded-full border-4 border-yellow-400 shadow-lg hover:animate-spin transition-all duration-700"
+/>
+
+    </div>
+
+    <button
+    onclick="window.location.href='/randomFact'"
+    class="text-lg font-medium text-indigo-600 hover:text-indigo-800 underline transition-all duration-300"
+  >
+    👉 Random Facts
+  </button>
+  
+  </div>
+  </div>
+  
+  
+
+  <footer class="mt-12 text-center text-sm text-gray-600 dark:text-gray-400 animate-fadeIn">
+    <div class="py-4 px-6 bg-gradient-to-r from-purple-300 via-pink-300 to-yellow-300 rounded-2xl shadow-lg border border-fuchsia-500 max-w-2xl mx-auto">
+      <p class="font-medium text-gray-900 dark:text-white">
+        🔮 Made with cosmic vibes by <span class="text-fuchsia-700 font-bold">@Helmar</span>
+      </p>
+      <p class="mt-1">
+        🚀 Powered by <a href="https://uspekhi.web.app" target="_blank" class="underline hover:text-purple-800 transition-colors">USPEKHI</a> + <a href="https://uspekhi.web.app" target="_blank" class="underline hover:text-yellow-600 transition-colors">Tailwind CSS</a>
+      </p>
+      <div class="mt-2 text-lg animate-pulse">
+        🌈 Stay groovy!
+      </div>
+    </div>
+
+    <style>
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%'><circle cx='2' cy='2' r='1.5' fill='white' opacity='0.6'/></svg>") repeat;
+        animation: twinkle 8s infinite alternate ease-in-out;
+        z-index: 0;
+        pointer-events: none;
+      }
+    
+      @keyframes twinkle {
+        0% { opacity: 0.4; transform: translateY(0px); }
+        100% { opacity: 1; transform: translateY(-10px); }
+      }
+    
+      body > * {
+        position: relative;
+        z-index: 1;
+      }
+
+      @media (prefers-color-scheme: dark) {
+  body::before {
+    opacity: 0.8;
+  }
+}
+    </style>
+  </footer>
+  
+</div>
+	 
+	</body>
+</html>
