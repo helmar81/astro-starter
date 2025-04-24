@@ -1,10 +1,17 @@
 ---
-const baseUrl = import.meta.env.SITE || 'http://localhost:4322';
+
+
+const baseUrl = import.meta.env.SITE || 'http://localhost:4324  '; // use correct port here!
 
 const [factRes, personRes] = await Promise.all([
   fetch(`${baseUrl}/api/randomFact.json`),
   fetch(`${baseUrl}/api/randomPerson.json`)
 ]);
+
+if (!factRes.ok || !personRes.ok) {
+  throw new Error('Failed to fetch API data');
+}
+
 
 const factData = await factRes.json();
 const randomPerson = await personRes.json();
