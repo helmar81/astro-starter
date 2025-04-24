@@ -5,6 +5,8 @@ const baseUrl = import.meta.env.SITE || 'http://localhost:4324  '; // use correc
 
 const [factRes, personRes] = await Promise.all([
   fetch(`${baseUrl}/api/randomFact.json`),
+
+  
   fetch(`${baseUrl}/api/randomPerson.json`)
 ]);
 
