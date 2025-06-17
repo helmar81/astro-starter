@@ -1,0 +1,23 @@
+---
+import PivotPointCalculator from '../components/PivotPointCalculator.jsx';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Daily Pivot Point Calculator</title>
+  </head>
+  <body>
+
+     <button onclick="window.location.href='/'" class="mt-2 ml-4 bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded">
+      ⬅ Back to Start
+    </button>
+    <PivotPointCalculator client:load />
+
+   
+  </body>
+</html>
+

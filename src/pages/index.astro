@@ -8,18 +8,21 @@ import footer from '../components/footer.astro';
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="Helmar Baechle" content="Uspekhi" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Helmar Baechle" content="Astro-Starter-Vibes" />
+
+    <!-- Google tag (gtag.js) -->
+
   </head>
   <body>
     <div class="m-8 p-6 bg-white dark:bg-gray-900 rounded-2xl shadow-lg max-w-3xl mx-auto space-y-6">
   <!-- Catchy Header -->
   <h1 class="text-4xl font-extrabold text-gray-800 dark:text-white tracking-wide text-center">
-    🚀 Astro Starter
+    🚀 Astro Vibes
   </h1>
   
   <p class="text-lg text-gray-600 dark:text-gray-300 text-center">
-    This is a simple starter template built with Tailwind CSS and Astro
+    Hey, I've put together this cool App that combines Tailwind CSS and Astro to make things look and work awesome for users!
   </p>
 
   <!-- Image & Button -->
@@ -33,17 +36,29 @@ import footer from '../components/footer.astro';
 
     </div>
 
-    <button
+   
+     <button
     onclick="window.location.href='/randomFact'"
     class="text-lg font-medium text-indigo-600 hover:text-indigo-800 underline transition-all duration-300"
   >
     👉 Random Facts
   </button>
   
-  </div>
-  </div>
+   <button
+    onclick="window.location.href='/trigger'"
+    class="text-lg font-medium text-indigo-600 hover:text-indigo-800 underline transition-all duration-300"
+  >
+    👉 Trigger
+  </button>
+
+   <button
+    onclick="window.location.href='/TradeAnalysis'"
+    class="text-lg font-medium text-indigo-600 hover:text-indigo-800 underline transition-all duration-300"
+  >
+    👉 Trade Analysis
+  </button>
   
-  
+  </div>
 
   <footer class="mt-12 text-center text-sm text-gray-600 dark:text-gray-400 animate-fadeIn">
     <div class="py-4 px-6 bg-gradient-to-r from-purple-300 via-pink-300 to-yellow-300 rounded-2xl shadow-lg border border-fuchsia-500 max-w-2xl mx-auto">
@@ -57,7 +72,7 @@ import footer from '../components/footer.astro';
         🌈 Stay groovy!
       </div>
     </div>
-
+  
     <style>
       body::before {
         content: "";
@@ -80,16 +95,16 @@ import footer from '../components/footer.astro';
         position: relative;
         z-index: 1;
       }
-
+  
       @media (prefers-color-scheme: dark) {
   body::before {
     opacity: 0.8;
   }
-}
+  }
     </style>
   </footer>
-  
+
 </div>
-	 
+	 </footer>
 	</body>
 </html>

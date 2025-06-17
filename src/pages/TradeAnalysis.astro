@@ -1,0 +1,31 @@
+---
+// Astro page for Trade Analysis Dashboard
+import Layout from '../layouts/Layout.astro';
+import TradeAnalysisComponent from '../components/TradeAnalysis.jsx';
+
+// You can load and process your CSV data here in the frontmatter
+// Example:
+// import fs from 'fs';
+// import path from 'path';
+// import Papa from 'papaparse';
+
+// const csvData = fs.readFileSync(path.join(process.cwd(), 'data', 'orders.csv'), 'utf8');
+// const parsed = Papa.parse(csvData, { header: true });
+// const tradeProfits = parsed.data.map(row => parseFloat(row.profit)).filter(p => !isNaN(p));
+// const tradePoints = parsed.data.map(row => parseFloat(row.points)).filter(p => !isNaN(p));
+
+const pageTitle = "Trade Analysis Dashboard";
+---
+
+<Layout title={pageTitle}>
+  <main>
+    <!-- The TradeAnalysis React component with client-side hydration -->
+    <TradeAnalysisComponent client:load />
+    
+    <!-- If you have processed CSV data, you can pass it as props: -->
+    <button onclick="window.location.href='/'" class="mt-2 ml-4 bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded">
+      ⬅ Back to Start
+    </button>
+    <!-- <TradeAnalysisComponent tradeProfits={tradeProfits} tradePoints={tradePoints} client:load /> -->
+  </main>
+</Layout>

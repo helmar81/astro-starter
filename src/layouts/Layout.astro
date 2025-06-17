@@ -1,0 +1,22 @@
+---
+// src/layouts/Layout.astro
+const { title = "Astro Vibes" } = Astro.props;
+
+import Footer from "../components/footer.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <link rel="stylesheet" href="/styles/tailwind.css" />
+  </head>
+  <footer class="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-pink-300 to-blue-300 p-4">
+    <div class="bg-white dark:bg-gray-900 rounded-3xl shadow-2xl p-6 sm:p-10 w-full max-w-xl text-center">
+      <slot />
+    </div>
+
+<footer />
+  </body>
+</html>
